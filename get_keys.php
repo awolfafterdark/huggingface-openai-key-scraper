@@ -1,6 +1,7 @@
 <?php
 $keys = [];
-$pattern = '/(sk-\w)<\/span>([a-zA-Z0-9]{47})/';
+#$pattern = '/(sk-\w)<\/span>([a-zA-Z0-9]{47})/';
+$pattern = '/r\'sk-or-v1-[a-zA-Z0-9\.\-_]+[`"\n]/';
 $char = explode('--char=', $argv[1])[1];
 $index = explode('--index=', $argv[2])[1];
 $ch = curl_init();
